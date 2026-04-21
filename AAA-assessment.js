@@ -202,3 +202,76 @@ expect(result).toBe(false);
 });
 
 
+//Add Items Test
+function addItem(arr, item) {
+arr.push(item);
+return arr;
+}
+test('add item to array', () => {
+// Arrange
+const arr = (["pen","book","pencil"],"eraser");
+// Act
+const result = addItem(arr, item);
+// Assert
+expect(result).toBe(["pen","book","pencil","eraser"]);
+});
+
+
+function addItem(arr, item) {
+arr.push(item);
+return arr;
+}
+test('add item to array when array is empty', () => {
+// Arrange
+const arr = [];
+const item = ["nike","doll shoes","jordan","heels"];
+// Act
+const result = addItem(arr, item);
+// Assert
+expect(result).toBe(["nike","doll shoes","jordan","heels"]);
+});
+
+
+function addItem(arr, item) {
+arr.push(item);
+return arr;
+}
+test('add item of another data type', () => {
+// Arrange
+const arr = (["nike","doll shoes","jordan"]);
+const item = 5;
+// Act
+const result = addItem(arr, item);
+// Assert
+expect(result).toBe(["nike","doll shoes","jordan","heels", 5]);
+});
+
+
+function addItem(arr, item) {
+arr.push(item);
+return arr;
+}
+test('add an array as an item to an array ', () => {
+// Arrange
+const arr = ["nike","doll shoes","jordan"];
+const item = ["Quinta", "Flower"];
+// Act
+const result = addItem(arr, item);
+// Assert
+expect(result).toBe(["nike","doll shoes","jordan","heels","Quinta", "Flower" ]);
+});
+
+
+function addItem(arr, item) {
+arr.push(item);
+return arr;
+}
+test('add null as an item to an array ', () => {
+// Arrange
+const arr = ["nike","doll shoes","jordan"];
+const item = null;
+// Act
+const result = addItem(arr, item);
+// Assert
+expect(result).toBe(["nike","doll shoes","jordan","heels",null ]);
+});
