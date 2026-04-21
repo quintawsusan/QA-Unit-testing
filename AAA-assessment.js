@@ -132,3 +132,73 @@ expect(result).toBe(false);
 });
 
 
+//Word Test
+function containsWord(sentence, word) {
+return sentence.includes(word);
+}
+test('return true if sentence contains word', () => {
+// Arrange
+const sentence = "I am a girl.";
+const word ="am";
+// Act
+const result = containsWord(sentence, word);
+// Assert
+expect(result).toBe(true);
+});
+
+
+function containsWord(sentence, word) {
+return sentence.includes(word);
+}
+test('return false if sentence contains word', () => {
+// Arrange
+const sentence = "I am a girl.";
+const word = "is";
+// Act
+const result = containsWord(sentence, word);
+// Assert
+expect(result).toBe(false);
+});
+
+
+function containsWord(sentence, word) {
+return sentence.includes(word);
+}
+test('return false if sentence contains numbers', () => {
+// Arrange
+const sentence = "I am a girl.";
+const word = "88";
+// Act
+const result = containsWord(sentence, word);
+// Assert
+expect(result).toBe(false);
+});
+
+
+function containsWord(sentence, word) {
+return sentence.includes(word);
+}
+test('return false if sentence is blank', () => {
+// Arrange
+const sentence = "";
+// Act
+const result = containsWord(sentence, word);
+// Assert
+expect(result).toBe(false);
+});
+
+
+function containsWord(sentence, word) {
+return sentence.includes(word);
+}
+test('return false if sentence contains a special character', () => {
+// Arrange
+const sentence = "I am a girl.";
+const word = "#";
+// Act
+const result = containsWord(sentence, word);
+// Assert
+expect(result).toBe(false);
+});
+
+
