@@ -10,6 +10,7 @@ const result = greet(name);
 expect(result).toBe(Guest);
 });
 
+
 function toggle(value){
     return !value;
     test('toggles boolean value', () => {
@@ -21,6 +22,7 @@ const result = toggle(value);
 expect(result).toBe(true);
 });
 }
+
 
 function addItem(arr, item) {
 arr.push(item);
@@ -56,10 +58,77 @@ return password.length >= 6;
 }
 test('returns true for valid password length', () => {
 // Arrange
-const password = "#Today25";
+const password = "T25";
 // Act
 const result = isValidPassword(password);
 // Assert
 expect(result).toBe(false);
 });
+
+
+//Password Test 
+function isValidPassword(password) {
+return password.length >= 6;
+}
+test('returns true for valid password length', () => {
+// Arrange
+const password = "#Todayson25";
+// Act
+const result = isValidPassword(password);
+// Assert
+expect(result).toBe(true);
+});
+
+
+function isValidPassword(password) {
+return password.length >= 6;
+}
+test('returns false for invalid password length', () => {
+// Arrange
+const password = "#25";
+// Act
+const result = isValidPassword(password);
+// Assert
+expect(result).toBe(false);
+});
+
+
+function isValidPassword(password) {
+return password.length >= 6;
+}
+test('return false for empty password', () => {
+// Arrange
+const password = "";
+// Act
+const result = isValidPassword(password);
+// Assert
+expect(result).toBe(false);
+});
+
+
+function isValidPassword(password) {
+return password.length >= 6;
+}
+test('return true for password equal to 6', () => {
+// Arrange
+const password = "banana";
+// Act
+const result = isValidPassword(password);
+// Assert
+expect(result).toBe(true);
+});
+
+
+function isValidPassword(password) {
+return password.length >= 6;
+}
+test('return false for password with only numbers', () => {
+// Arrange
+const password = "234567";
+// Act
+const result = isValidPassword(password);
+// Assert
+expect(result).toBe(false);
+});
+
 
