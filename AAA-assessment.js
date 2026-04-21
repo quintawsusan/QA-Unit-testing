@@ -28,12 +28,14 @@ return arr;
 }
 test('adds item to array', () => {
 // Arrange
-const arr = [1,2,3,4];
+const arr = ([1,2,3,4],5);
 // Act
-const result = addItem(arr,5);
+const result = addItem(arr,item);
 // Assert
 expect(result).toEqual([1,2,3,4,5]);
 });
+
+
 
 function removeItem(arr, item) {
 return arr.filter(i => i !== item);
@@ -47,6 +49,8 @@ const result = removeItem(arr,3);
 expect(result).toEqual([1,2,4,5]);
 });
 
+
+
 function isValidPassword(password) {
 return password.length >= 6;
 }
@@ -58,3 +62,4 @@ const result = isValidPassword(password);
 // Assert
 expect(result).toBe(false);
 });
+
